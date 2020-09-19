@@ -1,0 +1,155 @@
+<style type="text/css">
+    html, body {
+        height: 100%;
+    }
+    body {
+        text-align: center;
+        color: #FFF;
+        width: 100%;
+        height: 100%;
+        margin: 0px
+    }
+    div#wapper {
+        width: 100%;
+        text-align: left;
+        height: 100%;
+        margin: 0 auto;
+    }
+    nav {
+        background-color: #4a4a4a;
+        width: 15%;
+        margin: 0px;
+        padding: 10px;
+        float: left;
+        height: 100%;
+    }
+    section {
+        background-color: #f5f5f5;
+        width: 80%;
+        height: 100%;
+        margin: 0px;
+        padding: 10px;
+        float: left;
+        overflow: auto;
+    }
+    ul {
+        list-style: none;
+    }
+    a:link { color: white; text-decoration: none;}
+    a:visited { color: white; text-decoration: none;}
+    a:hover { color: #F2F2F2; text-decoration: underline;}
+
+	.blind {
+		position: absolute;
+		clip: rect(0 0 0 0);
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+	}
+		button {
+			background-color: transparent;
+			border: 0;
+			-webkit-appearance: none;
+			box-shadow: none;
+			border-radius: 0;
+			padding: 0;
+		}
+		select {
+			background-color: transparent;
+			border: 0;
+			-webkit-appearance: none;
+			box-shadow: none;
+			border-radius: 0;
+		}
+
+		.btn_search {
+			padding: 5px;
+		}
+
+		.btn_search:after {
+			content: '';
+			display:inline-block;
+			background: url('/dashboard/img/search_icon.png') no-repeat;
+			background-size: contain;
+			width: 30px;
+			height: 30px;
+			vertical-align: middle;
+		}
+		.form_name_search .inner {
+			position: relative;
+			display: inline-block;
+			padding-bottom: 5px;
+			border-bottom: 2px solid #333;
+			vertical-align: top;
+		}
+		.form_name_search .btn_search {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		.search_wrap {
+			padding: 50px;
+		}
+		.search_wrap_inner {
+            margin-bottom: 50px;
+            color: #333;
+		}
+		.search_wrap_inner .search_content {
+			position: relative;
+		}
+		.search_wrap_inner + .search_wrap_inner .btn_search {
+			position: absolute;
+			right: -40px;
+			top: -10px;
+		}
+		.search_wrap_inner + .search_wrap_inner .search_content {
+			display: inline-block;
+			vertical-align: top;
+		}
+		.search_wrap_inner .title {
+			display: block;
+			margin-bottom: 10px;
+			font-size: 26px;
+		}
+		.search_wrap_inner .name_search_input {
+			background-color: transparent;
+			border: 0;
+			-webkit-appearance: none;
+			box-shadow: none;
+			border-radius: 0;
+			width: 300px;
+			height: 40px;
+			padding-right: 40px;
+			box-sizing: border-box;
+			vertical-align: middle;
+		}
+		.selectbox_area {
+			display: inline-block;
+			margin-left: 5px;
+			padding: 0 5px 10px;
+			border-bottom: 2px solid #333;
+		}
+		.selectbox_area:first-child {
+			margin-left: 0;
+		}
+		.selectbox {
+			display: inline-block;
+			margin-right: 5px;
+			font-size: 18px;
+			vertical-align: top;
+		}
+		.selectbox select {
+			font-size: 18px;
+		}
+		.btn_date_area {
+			padding-top: 20px;
+		}
+		.btn_date_gap {
+			padding: 3px 8px;
+			margin-right: 5px;
+			border: 1px solid #333;
+			border-radius: 3px;
+			font-size: 16px;
+		}
+</style>

@@ -1,0 +1,208 @@
+<style>
+    dd,dt {
+      float:left;
+      margin:0;
+      padding:5px;
+      clear:both;
+      display:block;
+      width:100%;
+      color:black;
+    }
+    dt {
+      font-weight: 600;
+      font-size: 28px;
+      vertical-align: bottom;
+      background:#ddd;
+    }
+    item {
+      float: left;
+      width: 80px;
+      height: 33px;
+      line-height: 33px;
+    }
+    name {
+      font-weight: 600;
+      font-size: 28px;
+    }
+    sex {
+      width: 80px;
+      height: 33px;
+      line-height: 33px;
+    }
+    num {
+      font-weight: 600;
+      font-size: 28px;
+      vertical-align: bottom;
+    }
+    unit {
+      color:black;
+    }
+    block {
+      display:block;
+    }
+    time {
+      color:gray;
+    }
+    menu_list {
+      color:white;
+    }
+    .row {
+      height: 40px;
+    }
+    a:link { color: white; text-decoration: none;}
+    a:visited { color: white; text-decoration: none;}
+    a:hover { color: #F2F2F2; text-decoration: underline;}
+</style>
+
+<style type="text/css">
+     html, body {
+        height: 100%;
+    }
+
+    body {
+        text-align: center;
+        color: #FFF;
+        width: 100%;
+        margin: 0px
+    }
+    div#wapper {
+        width: 100%;
+        text-align: left;
+        height: 100%;
+        margin: 0 auto;
+    }
+    nav {
+        background-color: #4a4a4a;
+        width: 15%;
+        margin: 0px;
+        padding: 10px;
+        float: left;
+        height: 100%;
+    }
+    section {
+        background-color: #f5f5f5;
+        width: 80%;
+        height: 100%;
+        margin: 0px;
+        padding: 10px;
+        float: left;
+        overflow: auto;
+    }
+
+
+
+    .textarea { color: #3e3e3e; }
+
+body, ul, li, div {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+em {
+  font-style: normal;
+}
+img {
+  border: 0;
+}
+.content {
+  height: 100%;
+}
+.accident_list {
+  height: 100%;
+  white-space: nowrap;
+  font-size: 0;
+}
+.accident_list > .list {
+  overflow: auto;
+  display: inline-block;
+  width: 350px;
+  height: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: #fff;
+  vertical-align: top;
+  font-size: 20px;
+  color: #333;
+}
+.accident_list > .list:nth-child(2n-1) {
+  background-color: #f5f5f5;
+}
+.accident_list .rescue_worker_info {
+  overflow: hidden;
+}
+.accident_list .rescue_worker_info .estimated_time {
+  float: left;
+  line-height: 60px;
+}
+.accident_list .rescue_worker_info .thumb {
+  overflow: hidden;
+  float: right;
+  width: 60px;
+  height: 60px;
+  border-radius: 60%;
+}
+.accident_list .rescue_worker_info .thumb img {
+  vertical-align: top;
+}
+.accident_list .patient_info .identity {
+  padding: 20px 0;
+}
+.accident_list .patient_info .identity .name {
+  font-weight: 600;
+  font-size: 28px;
+}
+.accident_list .patient_info .status_list {
+  padding-bottom: 20px;
+}
+.accident_list .patient_info .status_list .list {
+  padding: 4px 0;
+}
+.accident_list .patient_info .status_list .list:before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 5px;
+  background-color: #333;
+  vertical-align: 6px;
+}
+.accident_list .patient_info .detail_status {
+  border-top: 1px solid #333;
+}
+.accident_list .patient_info .detail_status .info_area {
+  padding: 20px 0;
+  min-height: 215px;
+}
+.accident_list .patient_info .detail_status .detail_status_thumb {
+  min-height: 215px;
+}
+.accident_list .patient_info .detail_status .list {
+  padding: 5px 0;
+}
+.accident_list .patient_info .detail_status .list.point {
+  color: #d60202;
+}
+.accident_list .patient_info .detail_status .item {
+  float: left;
+  width: 80px;
+  height: 33px;
+  line-height: 33px;
+}
+.accident_list .patient_info .detail_status .value {
+  overflow: hidden;
+}
+.accident_list .patient_info .detail_status .value .num {
+  font-weight: 600;
+  font-size: 28px;
+  vertical-align: bottom;
+}
+.accident_list .patient_info .video_area {
+  margin: 0 -30px;
+}
+.accident_list .patient_info .video_area .temp {
+  height: 150px;
+  text-align: center;
+}
+</style>

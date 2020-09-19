@@ -1,0 +1,138 @@
+<html>
+<head>
+  <meta content="text/html; charset=euc-kr">
+  <title>Search</title>
+  <link rel="stylesheet" href="search_style2.css" type="text/css">
+</head>
+
+<body>
+    <div id="wapper">
+        <!--네비게이션-->
+        <nav>
+            <p>Menu</p>
+            <ul class="menu">
+                <li><a href="06_stream.html">대시보드</a></li>
+                <li><a href="">기록조회</a></li>
+                <li><a href="">환경설정</a></li>
+            </ul>
+        </nav>
+        <!--콘텐츠부분-->
+        <section>
+        <div class="search_wrap">
+            <div class="search_wrap_inner">
+                <strong class="title">환자 이름으로 검색</strong>
+                <div class="search_content">
+                    <div class="form_area">
+                        <form action="" class="form_name_search">
+                            <div class="inner">
+                                <input type="text" class="name_search_input">
+                                <button type="button" class="btn_search"><span class="blind"></span></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="search_wrap_inner">
+                <strong class="title">날짜로 검색</strong>
+                <div class="search_content">
+                    <div class="form_area">
+                        <form action="" class="form_date_search">
+                            <div class="selectbox_area">
+                                <div class="selectbox">
+                                    <select name="year" id="start_year">
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018" selected>2018</option>
+                                    </select>
+                                    <label for="start_year">년</label>
+                                </div>
+                                <div class="selectbox">
+                                    <select name="month" id="start_month">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5" selected>5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                    <label for="start_month">월</label>
+                                </div>
+                                <div class="selectbox">
+                                    <select name="date" id="start_date">
+                                        <option value="1" selected>1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <label for="start_date">일</label>
+                                </div>
+                            </div> ~
+                            <div class="selectbox_area">
+                                <div class="selectbox">
+                                    <select name="year" id="end_year">
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018" selected>2018</option>
+                                    </select>
+                                    <label for="end_year">년</label>
+                                </div>
+                                <div class="selectbox">
+                                    <select name="month" id="end_month">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10" selected>10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                    <label for="end_month">월</label>
+                                </div>
+                                <div class="selectbox">
+                                    <select name="date" id="end_date">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5" selected>5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                    <label for="end_date">일</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="btn_date_area">
+                        <span class="blind">날짜 간격별로 찾기</span>
+                        <br><br>
+                        <button class="btn_date_gap" type="button">1일</button>
+                        <button class="btn_date_gap" type="button">3일</button>
+                        <button class="btn_date_gap" type="button">1주일</button>
+                        <button class="btn_date_gap" type="button">1개월</button>
+                    </div>
+                    <button type="button" class="btn_search"><span class="blind"></span></button>
+                </div>
+
+            </div>
+        </div>
+
+        </section>
+    </div>
+</body>
+</html>

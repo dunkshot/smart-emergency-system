@@ -1,0 +1,226 @@
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="jquery.youtubepopup.min.js"></script>
+<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" rel="stylesheet" />
+<script>
+  $(function () {
+    $("a.youtube").YouTubePopup({ youtubeId: 's9GqgoR9d4o', title: '13분 후 도착 예정' });
+  });
+</script>
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta content="text/html; charset=euc-kr">
+  <title>Dash Board</title>
+  <link rel="stylesheet" href="dash_style.css" type="text/css">
+</head>
+
+<body>
+  <div id="wapper">
+    <!--네비게이션-->
+    <nav>
+      <p>Menu</p>
+      <ul class="menu">
+        <li><a href="">대시보드</a></li>
+        <li><a href="search02.html">기록조회</a></li>
+        <li><a href="">환경설정</a></li>
+      </ul>
+    </nav>
+    <!--콘텐츠부분-->
+    <section>
+      <div class="content">
+        <ul class="accident_list">
+          <li class="list">
+            <div class="inner">
+              <div class="rescue_worker_info">
+                <em class="estimated_time"><span class="time">13분</span>후 도착 예정</em>
+                <div class="thumb"><img src="/dashboard/img/img0.jpg" height="60" alt=""></div>
+              </div>
+              <div id="container">Loading ...</div>
+              <script>
+                // create a new websocket
+                var socket = io.connect('http://13.209.181.207:9092');
+                // on message received we print all the data inside the #container div
+                socket.on('notification', function (data) {
+                  var usersList = "<dl>";
+                  $.each(data.users, function (index, user) {
+                    usersList +=
+                      "<li class='row'><name>" + user.P_name + "</name><sex>" + user.sex + "</sex></li>" +
+                      "<li class='row'><item>" + user.symptom + "</item></li>" +
+                      "<li class='row'><item>혈압</item><num>" + user.pressure + "</num><unit> mmHg</unit></li>" +
+                      "<li class='row'><item>맥박</item><num>" + user.heartrate + "</num><unit> 회/분</unit></li>" +
+                      "<li class='row'><item>체온</item><num>" + user.temperature + "</num<unit> ℃</unit></li>" +
+                      "<li class='row'><item>SpO2</item><num>" + user.oxygen + "</num><unit> %</unit><li>" +
+                      "<li class='row'><item>" + user.symptom + "</item></li>";
+                  });
+                  usersList += "</dl>";
+                  $('#container').html(usersList);
+                  $('time').html('Last Update:' + data.time);
+                });
+              </script>
+            </div>
+            <a class="youtube" href="#" rel="s9GqgoR9d4o" title="실시간 스트리밍">
+              <img src="https://img.youtube.com/vi/s9GqgoR9d4o/maxresdefault.jpg" width="100%" alt="">
+            </a>
+          </li>
+
+          <li class="list">
+            <div class="inner">
+              <div class="rescue_worker_info">
+                <em class="estimated_time"><span class="time">13분</span>후 도착 예정</em>
+                <div class="thumb"><img src="/dashboard/img/img1.jpg" height="60" alt=""></div>
+              </div>
+              <div class="patient_info">
+                <div class="identity">
+                  <em class="name">홍길동</em>
+                  <span class="add_info"><span class="gender">남/</span><span class="gae">30대</span></span>
+                </div>
+                <ul class="status_list">
+                  <li class="list">계단 추락</li>
+                  <li class="list">의식 불명</li>
+                  <li class="list">외상 보이지 않음</li>
+                </ul>
+                <div class="detail_status">
+                  <div class="info_area">
+                    <ul class="detail_status_list">
+                      <!-- [D] 강조되어야 하는 li.list 에 .point 클래스 추가 -->
+                      <li class="list">
+                        <span class="item">혈압</span>
+                        <span class="value"><span class="num">126</span>mmHg</span>
+                      </li>
+                      <li class="list">
+                        <span class="item">맥박</span>
+                        <span class="value"><span class="num">80</span>회/분</span>
+                      </li>
+                      <li class="list">
+                        <span class="item">체온</span>
+                        <span class="value"><span class="num">37</span>℃</span>
+                      </li>
+                      <li class="list">
+                        <span class="item">의식</span>
+                        <span class="value"><span class="num">정상</span></span>
+                      </li>
+                      <li class="list">
+                        <span class="item">SpO2</span>
+                        <span class="value"><span class="num">98</span>%</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="video_area">
+                    <div class="temp"><img src="/dashboard/img/video.jpg" width="90%" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list">
+            <div class="inner">
+              <div class="rescue_worker_info">
+                <em class="estimated_time"><span class="time">10분</span>후 도착 예정</em>
+                <div class="thumb"><img src="/dashboard/img/img2.jpg" width="60" alt=""></div>
+              </div>
+              <div class="patient_info">
+                <div class="identity">
+                  <em class="name">홍길동</em>
+                  <span class="add_info"><span class="gender">남/</span><span class="gae">30대</span></span>
+                </div>
+                <ul class="status_list">
+                  <li class="list">오토바이 추돌 교통사고</li>
+                  <li class="list">의식 불명</li>
+                  <li class="list">오른팔 외상 확인</li>
+                </ul>
+                <div class="detail_status">
+                  <div class="info_area">
+                    <ul class="detail_status_list">
+                      <!-- [D] 강조되어야 하는 li.list 에 .point 클래스 추가 -->
+                      <li class="list">
+                        <span class="item">혈압</span>
+                        <span class="value"><span class="num">125</span>mmHg</span>
+                      </li>
+                      <li class="list">
+                        <span class="item">맥박</span>
+                        <span class="value"><span class="num">60</span>회/분</span>
+                      </li>
+                      <li class="list">
+                        <span class="item">체온</span>
+                        <span class="value"><span class="num">37.5</span>℃</span>
+                      </li>
+                      <li class="list point">
+                        <span class="item">의식</span>
+                        <span class="value"><span class="num">무의식</span></span>
+                      </li>
+                      <li class="list">
+                        <span class="item">SpO2</span>
+                        <span class="value"><span class="num">97</span>%</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="video_area">
+                    <div class="temp"><img src="/dashboard/img/video2.jpg" width="90%" alt=""></div>
+                  </div>
+                  <img src="/dashboard/img/ana.png" width="100%">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list">
+            <div class="inner">
+              <div class="rescue_worker_info">
+                <em class="estimated_time"><span class="time">8분</span>후에 도착 예정</em>
+                <div class="thumb"><img
+                    src="http://bntnews.hankyung.com/bntdata/images/photo/201704/fb724ce16335300aa7a107acff7de03d.jpg"
+                    width="60" alt=""></div>
+              </div>
+              <div class="patient_info">
+                <div class="identity">
+                  <em class="name">홍길동</em>
+                  <span class="add_info"><span class="gender">남/</span><span class="gae">30대</span></span>
+                </div>
+                <ul class="status_list">
+                  <li class="list">화장실 미끄러짐</li>
+                  <li class="list">의식 불명</li>
+                  <li class="list">외상 보이지 않음</li>
+                </ul>
+                <div class="detail_status">
+                  <div class="info_area">
+                    <ul class="detail_status_list">
+                      <!-- [D] 강조되어야 하는 li.list 에 .point 클래스 추가 -->
+                      <li class="list">
+                        <span class="item">혈압</span>
+                        <span class="value"><span class="num">125</span>mmHg</span>
+                      </li>
+                      <li class="list">
+                        <span class="item">맥박</span>
+                        <span class="value"><span class="num">60</span>회/분</span>
+                      </li>
+                      <li class="list">
+                        <span class="item">체온</span>
+                        <span class="value"><span class="num">37.5</span>℃</span>
+                      </li>
+                      <li class="list point">
+                        <span class="item">의식</span>
+                        <span class="value"><span class="num">무의식</span></span>
+                      </li>
+                      <li class="list">
+                        <span class="item">SpO2</span>
+                        <span class="value"><span class="num">97</span>%</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="video_area">
+                    <div class="temp"><img src="/dashboard/img/video3.jpg" width="90%" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
