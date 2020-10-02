@@ -110,7 +110,7 @@
 
 [▶️ Youtube](https://youtu.be/WW7t_OEq-74)
 
-![스크린샷 2020-10-02 오후 9.32.09](md-images/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202020-10-02%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%209.32.09.png)
+![prototype-video-capture](md-images/prototype-video-capture.png)
 
 ## 공모전 수상
 
