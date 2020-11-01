@@ -1,3 +1,1 @@
-Raspberry Pi
-
-Google STT(Speach-To-Text) API
+![image-20201101201603410](md-images/image-20201101201603410.png)
