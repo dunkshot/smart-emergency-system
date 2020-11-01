@@ -1,8 +1,8 @@
 import pymysql.cursors
 
 # Connect to the database
-connection = pymysql.connect(host='rds-mysql-10mintutorial.ccbpccuyqu2i.ap-northeast-2.rds.amazonaws.com',
-                            user='master????',
+connection = pymysql.connect(host='rds...ap-northeast-2.rds.amazonaws.com',
+                            user='user????',
                             password='password????',
                             db='database????',
                             charset='utf8mb4',
