@@ -1,6 +1,6 @@
 
 
-# 스마트 119 응급시스템 🚨
+# 🚨 스마트 119 응급시스템 🚨
 
 `기획` `개발` `디자인` 
 
@@ -38,7 +38,7 @@
 | -------------- | ------------------------------------------------------------ |
 | 개발환경 (S/W) | (서버 & 웹) **AWS EC2 Linux**<br>(데이터베이스) **AWS RDS MySQL**<br>(디바이스) **Raspberry Pi OS** |
 | 개발환경 (H/W) | (개발보드) **Raspberry Pi Zero W**<br>(카메라) **RPI Camera NoIR**<br>(마이크) **USB Microphone AT-815** |
-| API            | Goolge STT(Speach-To-Text) API                               |
+| API            | Goolge STT(Speech-To-Text) API                               |
 
 ### 수상이력
 
